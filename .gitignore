@@ -5,7 +5,7 @@ ubuntu-xenial/
 
 # CMake
 build/
-
+Cmake-Solutions/
 # XCode
 .DS_Store
 *.pbxuser
