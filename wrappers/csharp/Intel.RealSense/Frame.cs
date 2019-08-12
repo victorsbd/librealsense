@@ -193,6 +193,12 @@ namespace Intel.RealSense
             object error;
             return NativeMethods.rs2_depth_frame_get_distance(m_instance.Handle, x, y, out error);
         }
+        public Plane FitPlane(RegionOfInterest roi, int iterations, float outliers)
+        {
+            object error;
+            var ptr = NativeMethods.rs2_depth_frame_fit_plane(m_instance.Handle, roi.min_x, roi.min_y, roi.max_x, roi.max_y, iterations, outliers, out error);
+            return new Plane(ptr);
+        }
     }
 
 

@@ -274,4 +274,16 @@ namespace Intel.RealSense
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 3)]
         public float[] translation; // Three-element translation vector, in meters
     }
+    /// <summary>
+    /// Region of interest
+    /// </summary>
+    [System.Serializable]
+    [StructLayout(LayoutKind.Sequential)]
+    public struct RegionOfInterest
+    {
+        public int min_x;
+        public int min_y;
+        public int max_x;
+        public int max_y;
+    }
 }
